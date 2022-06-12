@@ -105,13 +105,14 @@ const cir = area_calc.querySelector('.cir');
 area_type.onchange = () => {
 
     // after changing area type input value will remove
-    let input = area_calc.querySelectorAll('input');
-    
-    input.forEach(item => {
-        item.value = ''; 
-    })
 
+    let input = area_calc.querySelectorAll('input');
+
+    input.forEach(item => {
+        item.value = '';
+    })
     
+
 
     if (area_type.value == 'Rectangle') {
         rec.style.display = 'block';
@@ -149,8 +150,6 @@ area_calc.onsubmit = (e) => {
 
     e.preventDefault();
 
-
-
     if (area_type.value == 'Rectangle') {
 
         let length = area_calc.querySelector('.rec input[name="length"]').value;
@@ -178,9 +177,8 @@ area_calc.onsubmit = (e) => {
 
         area_result.innerHTML = areCal(area_type.value, radius)
     }
-    else {
+    else{
         area_result.innerHTML = msgAlert('Area type not selected');
     }
-
 
 }

@@ -97,20 +97,42 @@ const currencyConverter = (ammount, currency) => {
 const areCal = (type, val1, val2 = null) => {
 
     if (type == 'Rectangle') {
-        return msgAlert(`The area of Rectangle is ${val1 * val2}`, 'success')
+
+        if (val1 == '' || val2 == '') {
+            return msgAlert('All Fields Required');
+        } else {
+            return msgAlert(`The area of Rectangle is ${val1 * val2}`, 'success');
+        }
+
     } 
     else if(type == 'Square'){
         
-        return msgAlert(`The area of Square is ${val1 * val1}`, 'success')
+        if (val1 == '') {
+            return msgAlert('All Fields Required');
+        } else {
+            return msgAlert(`The area of Square is ${val1 * val1}`, 'success')
+        }
+        
     }
     else if(type == 'Triangle'){
+
+        if (val1 == '' || val2 == '') {
+            return msgAlert('All Fields Required')
+        } else {
+            return msgAlert(`The area of Triangle is ${.5 *val1 * val2}`, 'success')
+        }
         
-        return msgAlert(`The area of Triangle is ${.5 *val1 * val2}`, 'success')
     }
     else if(type == 'Circle'){
         
         let calculation = 3.14 * (val1*val1);
-        return msgAlert(`The area of Circle is ${ calculation }`, 'success')
+
+        if (val1 == 0) {
+            return msgAlert('All Fields Required')
+        } else {
+            return msgAlert(`The area of Circle is ${ calculation }`, 'success')
+        }
+        
     }
 
 }
