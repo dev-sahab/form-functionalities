@@ -84,6 +84,6 @@ const currencyConverter = (ammount, currency) => {
 
     total_ammount = ammount * rate;
 
-    return msgAlert(`${ammount} ${currency} = ${total_ammount.toFixed(2)}`, 'success')
+    return msgAlert(`${ammount} ${currency} = ${total_ammount.toFixed(2)} BDT`, 'success')
 
 }
