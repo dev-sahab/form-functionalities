@@ -55,9 +55,15 @@ const currency = currency_converter_form.querySelector('select[name="currencies"
 
 
 // when currencty type will change then alert and input value will empty
+let count = 0;
 currency.onchange = () => {
-    ammount.value = '';
+    count++
     currency_result.innerHTML = '';
+    if (count > 1) {
+        ammount.value = '';
+    }
+
+    console.log(count);
 }
 
 
