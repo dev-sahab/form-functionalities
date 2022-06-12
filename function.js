@@ -9,7 +9,7 @@ const msgAlert = (msg, type = 'danger') => {
 
 
 /**
- * Age checker Function
+ * Age checker Pattern Function 
  */
 
 const ageChecker = (age) => {
@@ -18,7 +18,7 @@ const ageChecker = (age) => {
 }
 
 /**
- *  Marriage age Calculator
+ *  Marriage age Calculator Function
  */
 
 const marriageAgecheck = (name, age, gender) => {
@@ -57,7 +57,7 @@ const marriageAgecheck = (name, age, gender) => {
 
 
 /**
- * Currency Converter
+ * Currency Converter Function
  */
 
 const currencyConverter = (ammount, currency) => {
@@ -85,5 +85,32 @@ const currencyConverter = (ammount, currency) => {
     total_ammount = ammount * rate;
 
     return msgAlert(`${ammount} ${currency} = ${total_ammount.toFixed(2)} BDT`, 'success')
+
+}
+
+
+
+/**
+ * Area Calculator
+ */
+
+const areCal = (type, val1, val2 = null) => {
+
+    if (type == 'Rectangle') {
+        return msgAlert(`The area of Rectangle is ${val1 * val2}`, 'success')
+    } 
+    else if(type == 'Square'){
+        
+        return msgAlert(`The area of Square is ${val1 * val1}`, 'success')
+    }
+    else if(type == 'Triangle'){
+        
+        return msgAlert(`The area of Triangle is ${.5 *val1 * val2}`, 'success')
+    }
+    else if(type == 'Circle'){
+        
+        let calculation = 3.14 * (val1*val1);
+        return msgAlert(`The area of Circle is ${ calculation }`, 'success')
+    }
 
 }

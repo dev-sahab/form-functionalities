@@ -7,3 +7,9 @@
 body{
     font-family: poppins;
 }
+.rec,
+.squ,
+.tri,
+.cir{
+    display: none;
+}

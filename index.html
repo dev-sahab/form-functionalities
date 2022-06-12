@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row align-items-center justify-content-center  min-vh-100">
 
-                <div class="col-md-8 col-lg-6">
+                <div class="col-md-8 col-lg-6 py-5">
                     <div class="marriage-age-cal mb-5">
                         <div class="card shadow">
                             <div class="card-header">
@@ -88,6 +88,66 @@
                             </div>
                             <div class="card-footer">
                                 <div id="currency_result"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="area-calculator mt-5">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <h2>Area Calculator</h2>
+                            </div>
+                            <div class="card-body">
+                                <form id="area_calc">
+                                    <div class="select-area">
+                                        <label>Select Area Type</label>
+                                        <select name="area_type" class="mt-2 form-control">
+                                            <option value="">-Select-</option>
+                                            <option value="Rectangle">Rectangle</option>
+                                            <option value="Square">Square</option>
+                                            <option value="Triangle">Triangle</option>
+                                            <option value="Circle">Circle</option>
+                                        </select>
+                                    </div>
+                                    <div class="rec">
+                                        <div class="mt-3">
+                                            <label>Length of Rectangle</label>
+                                            <input type="text" name="length" class="form-control mt-2" placeholder="Length">
+                                        </div>
+                                        <div class="mt-3">
+                                            <label>Width of Rectangle</label>
+                                            <input type="text" name="width" class="form-control mt-2" placeholder="Width">
+                                        </div>
+                                    </div>
+                                    <div class="squ">
+                                        <div class="mt-3">
+                                            <label>Area of Square</label>
+                                            <input type="text" name="area" class="form-control mt-2" placeholder="Area">
+                                        </div>
+                                    </div>
+                                    <div class="tri">
+                                        <div class="mt-3">
+                                            <label>Base of Triangle</label>
+                                            <input type="text" name="base" class="form-control mt-2" placeholder="Base">
+                                        </div>
+                                        <div class="mt-3">
+                                            <label>Height of Triangle</label>
+                                            <input type="text" name="height" class="form-control mt-2" placeholder="Height">
+                                        </div>
+                                    </div>
+                                    <div class="cir">
+                                        <div class="mt-3">
+                                            <label>Radius of Circle</label>
+                                            <input type="text" name="radius" class="form-control mt-2" placeholder="Radius">
+                                        </div>
+                                    </div>
+                                    <div class="button mt-4">
+                                        <button class="btn btn-secondary w-100 ">Calculate</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <div id="area_result"></div>
                             </div>
                         </div>
                     </div>
