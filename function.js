@@ -82,6 +82,8 @@ const currencyConverter = (ammount, currency) => {
             break
     }
 
-    return msgAlert(`${ammount} ${currency} = ${ammount * rate}`, 'success')
+    total_ammount = ammount * rate;
+
+    return msgAlert(`${ammount} ${currency} = ${total_ammount.toFixed(2)}`, 'success')
 
 }
