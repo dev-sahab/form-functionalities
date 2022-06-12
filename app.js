@@ -1,3 +1,8 @@
+/**
+ * Marriage age calculator
+ */
+
+
 // get elements
 const age_form = document.getElementById('age_form');
 const result = document.querySelector('.result');
@@ -35,20 +40,30 @@ age_form.onsubmit = (e) => {
 
 }
 
-// Currency converter Form
+
+/**
+ * Currency converter Form
+ */
 
 // get elements
 
 const currency_converter_form = document.getElementById('currency_converter');
 const currency_result = document.getElementById('currency_result');
 
+const ammount = currency_converter_form.querySelector('input[name="ammount"]');
+const currency = currency_converter_form.querySelector('select[name="currencies"]');
 
 
+// when currencty type will change then alert and input value will empty
+currency.onchange = () => {
+    ammount.value = '';
+    currency_result.innerHTML = '';
+}
+
+
+// onsubmit currency converter form
 currency_converter_form.onsubmit = (e) => {
     e.preventDefault();
-
-    const ammount = currency_converter_form.querySelector('input[name="ammount"]');
-    const currency = currency_converter_form.querySelector('select[name="currencies"]');
 
 
     // form validation
@@ -62,7 +77,9 @@ currency_converter_form.onsubmit = (e) => {
 }
 
 
-// Area calculator
+/**
+ * Area calculator
+ */
 
 // get elements
 
