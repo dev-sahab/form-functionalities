@@ -13,20 +13,20 @@ age_form.onsubmit = (e) => {
 
     const name = age_form.querySelector('input[name="name"]');
     const age = age_form.querySelector('input[name="age"]');
-    const gender = age_form.querySelector('input[name="gender"]:checked');
-    // const gender = age_form.querySelectorAll('input[name="gender"]');
+//     const gender = age_form.querySelector('input[name="gender"]:checked');
+    const gender = age_form.querySelectorAll('input[name="gender"]');
 
-    // let gender_name = '';
-    // gender.forEach(item => {
+    let gender_name = '';
+    gender.forEach(item => {
         
-    //     if (item.checked){
-    //         gender_name = item.value
-    //     }
-    // })
+        if (item.checked){
+            gender_name = item.value
+        }
+    })
     
 
     // form validation
-    if (name.value == "" || age.value == "" || gender.value == ""){
+    if (name.value == "" || age.value == "" || gender_name == ""){
         result.innerHTML = msgAlert('All fields are required');
     } else if (ageChecker(age.value) ==  false){
         // age field validation
